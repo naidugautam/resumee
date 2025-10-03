@@ -1,19 +1,16 @@
-def is_prime(n):
-    if n <= 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True
+const quotes = [
+    "Believe in yourself!",
+    "You can do it!",
+    "Every day is a new opportunity.",
+    "Mistakes are proof that you are trying.",
+    "Success is the sum of small efforts repeated daily."
+];
 
-def primes_up_to(limit):
-    primes = []
-    for num in range(2, limit + 1):
-        if is_prime(num):
-            primes.append(num)
-    return primes
+function getRandomQuote() {
+    const index = Math.floor(Math.random() * quotes.length);
+    return quotes[index];
+}
 
-# Example usage
-limit = 50
-prime_numbers = primes_up_to(limit)
-print(f"Prime numbers up to {limit}: {prime_numbers}")
+// Example usage
+console.log("Here's your motivational quote:");
+console.log(getRandomQuote());
